@@ -11,6 +11,7 @@
 # Libraries
 import tensorflow as tf
 from keras.models import Sequential, load_model
+from keras.layers import Dense, Conv2D, Dropout, Flatten, MaxPooling2D
 
 # Importing the data
 
