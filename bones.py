@@ -14,14 +14,28 @@ from keras.models import Sequential, load_model
 from keras.layers import Dense, Conv2D, Dropout, Flatten, MaxPooling2D
 
 # Importing the data
+    # Data - Total of 2000 Images (1850 for training, 150 for testing)
+    # Two classes (binary classification) - Bone broked or not
 
 # Preprocessing the data
 
-# Creating a Sequential Model and adding the layers
+# Creating a sequential model and adding the layers
+model = Sequential()
 
     # Defining the model
+        # Feature extractor
+            # Convolution
+            # Subsampling
+            # Convolution
+            # Subsampling
+        # Classification
+            # Fully connected network
+
     # Compiling the model
+        # Defining the parameters
+    
     # Training the model
+
     # Validating the model
 
 # Evaluating the model
