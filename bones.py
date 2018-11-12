@@ -32,7 +32,7 @@ import matplotlib.pyplot as plt # For image plotting.
 
 K.clear_session() # Kill older running keras applications
 
-# Importing the data and preprocessing the data
+# Importing and preprocessing the data
     # Data - Total of 2000 Images (1850 for training, 150 for testing)
     # Two classes (binary classification) - Bone broked or not
 
@@ -65,15 +65,37 @@ model = Sequential()
         # Classification
             # Fully connected network
 
+model.add(Conv2D(28, kernel_size=(3,3), input_shape=(256,256)))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Flatten()) # Flattening the 2D arrays for fully connected layers
+model.add(Dense(128, activation=tf.nn.relu))
+model.add(Dropout(0.2))
+model.add(Dense(10,activation=tf.nn.softmax))
+
+
     # Compiling the model
         # Defining the parameters
-    
+
+model.compile(loss="categorical_crossentropy", optimizer="sgd", metrics = ['accuracy'])
+
     # Training the model
+
+model.fit_generator(
+        train_generator,
+        steps_per_epoch=2000,
+        epochs=5,
+        validation_data=test_generator,
+        validation_steps=800)
 
     # Validating the model
 
+
 # Evaluating the model
 
+model.evaluate(test_generator)
+
 # Saving the model
+
+model.save('my_model.h5')  # creates a HDF5 file 'my_model.h5'
 
 # Predicting new inputs
