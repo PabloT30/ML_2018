@@ -40,14 +40,21 @@ training_path = './elbow_dataset'
 test_path = './elbow_test_dataset'
 
 train_datagen = ImageDataGenerator(rescale=1./255)
-train_generator = train_datagen.flow_from_directory(training_path)
+train_generator = train_datagen.flow_from_directory(
+    directory = training_path,
+    class_mode = 'binary',
+    target_size = (256,256)
+)
 
 test_datagen = ImageDataGenerator(rescale=1./255)
-test_generator = test_datagen.flow_from_directory(test_path)
-
+test_generator = test_datagen.flow_from_directory(
+    directory = test_path,
+    class_mode = 'binary',
+    target_size = (256,256)
+)
 
 # Creating a sequential model and adding the layers
-#model = Sequential()
+model = Sequential()
 
     # Defining the model
         # Feature extractor
