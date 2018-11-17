@@ -122,7 +122,7 @@ cnn.fit_generator(
 
 cnn.save('my_model.h5')  # creates a HDF5 file 'my_model.h5'
 '''
-Model saved with an accuaracy of 97.07%
+Model saved with an accuracy of 97.07%
 '''
 
 # Predicting new inputs
