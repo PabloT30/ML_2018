@@ -99,9 +99,11 @@ cnn.add(Dense(classes, activation='softmax'))
     # Compiling the model
         # Defining the parameters
 
-cnn.compile(loss='categorical_crossentropy',
-            optimizer=optimizers.Adam(lr=lr),
-            metrics=['accuracy'])
+cnn.compile(
+    loss='categorical_crossentropy',
+    optimizer=optimizers.Adam(lr=lr),
+    metrics=['accuracy']
+)
 
     # Training the model
 
