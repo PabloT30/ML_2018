@@ -112,7 +112,8 @@ cnn.fit_generator(
     steps_per_epoch=steps,
     epochs=epochs,
     validation_data=test_generator,
-    validation_steps=validation_steps)
+    validation_steps=validation_steps
+)
 
     # Validating the model
 
