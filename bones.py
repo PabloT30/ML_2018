@@ -121,5 +121,13 @@ cnn.fit_generator(
 # Saving the model
 
 cnn.save('my_model.h5')  # creates a HDF5 file 'my_model.h5'
+'''
+Model saved with an accuaracy of 97.07%
+'''
 
 # Predicting new inputs
+'''
+Prediction done in the "predicition.py" file
+'''
+
+K.clear_session() # Kill older running keras applications
