@@ -1,3 +1,4 @@
+print("This is the beginning of a nice way!")
 a = 2 + 2
 b = 3
 c = a + b + 3
